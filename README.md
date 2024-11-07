@@ -30,3 +30,20 @@ create database dotnetapp;
 ```
 
 configure the database login info so the app can access it in `appsettings.json`
+
+### .NET Database setup
+
+Make sure you have the ef tool package to connect it to your database and so you can run migrations.
+```
+dotnet tool install --global dotnet-ef
+```
+
+To initialize first migration:
+```
+dotnet ef migrations add init
+```
+
+Then update your local database:
+```
+dotnet ef database update
+```
